@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/projekt/src-gen" creationIcons="false" editDirectory="/projekt.edit/src-gen"
+    editorDirectory="/projekt.editor/src-gen" modelPluginID="projekt" modelName="Projekt"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="21.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>projekt.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Projekt" disposableProviderFactory="true" ecorePackage="projekt.ecore#/">
+    <genClasses ecoreClass="projekt.ecore#//Html">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Html/head"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Html/body"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Head">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Head/metas"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Head/titles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Head/bases"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Head/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Head/styles"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Meta">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Meta/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Title">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Title/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Base">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Base/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Link/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Style">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Style/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Body">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Body/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Body/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Heading">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Heading/h_number"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Heading/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//BodyElement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//BodyElement/text"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/bodyElements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/headings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/paragraphs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/divs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/spans"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/unorderedLists"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/orderedLists"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/listItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/footers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/headers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/hyperLinks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/images"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/boldTexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/italicTexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/underlineTexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/lineBreaks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/codes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/plainTexts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/forms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/formLabels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/formFields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/formButtons"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/formCheckBoxRadios"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//BodyElement/tables"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Paragraph">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Paragraph/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Paragraph/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Div">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Div/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Div/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Span">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Span/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Span/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//ListItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//ListItem/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//ListItem/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//UnorderedList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//UnorderedList/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//UnorderedList/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//OrderedList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//OrderedList/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//OrderedList/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//HyperLink">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//HyperLink/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//HyperLink/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Image">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Image/link"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Image/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//BoldText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//BoldText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//ItalicText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//ItalicText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//UnderlineText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//UnderlineText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//LineBreak"/>
+    <genClasses ecoreClass="projekt.ecore#//Code">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Code/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//PlainText">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//PlainText/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Form">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Form/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Form/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Footer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Footer/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Footer/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Header">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Header/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//Header/text"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//FormLabel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormLabel/label_name"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//FormField">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormField/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormField/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormField/label_name"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//FormButton">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormButton/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormButton/value"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//FormCheckBoxRadio">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormCheckBoxRadio/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormCheckBoxRadio/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//FormCheckBoxRadio/value"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//Table">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//Table/tableRows"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//TableRow">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//TableRow/tableCells"/>
+    </genClasses>
+    <genClasses ecoreClass="projekt.ecore#//TableCell">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projekt.ecore#//TableCell/bodyElements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projekt.ecore#//TableCell/text"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

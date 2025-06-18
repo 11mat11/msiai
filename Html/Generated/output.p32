@@ -1,0 +1,177 @@
+|{
+    ;"UTF-8"/;
+    *"Kompletny Test Strony"/*
+    @"https://test.com"/@
+    ?"style.css"/?
+    `"body {color: red; background-color: yellow;};"/`
+}|
+
+!{        # "Nagłówek 1"
+      ## "Nagłówek 2"
+      ### "Nagłówek 3"
+      #### "Nagłówek 4"
+      ##### "Nagłówek 5"
+      ###### "Nagłówek 6"
+
+	*	"Akapit z"
+	
+		^"Pogrubienie"/^
+	
+		"i"
+	
+		_"kursywa"/_
+	
+	
+/*
+
+	@	"Div ze"
+	
+		%"spanem"/%
+	
+		"i z obrazkiem"
+	
+		="image.jpg"/|"Alt"/=
+	
+	
+/@
+
+	+
+	+
+
+	&	-	"Lista"
+		
+			^"pogrubienie"/^
+		
+			"nieuporządkowana"
+		
+		
+	/-
+	
+		-
+			"Element 1"
+	/-
+	
+		-
+			"Element 2"
+	/-
+	
+	
+/&
+
+	+
+	+
+
+	$	-
+			"Lista uporządkowana"
+	/-
+		-
+			"Element A"
+	/-
+		-
+			"Element B"
+	/-
+	
+	
+/$
+
+	+
+	+
+
+	?"https://example.com"|"Hiperłącze"/?
+
+	~"Podkreślenie"/~
+
+	`"let x = 5;"/`
+
+	+
+	+
+
+	[
+			|
+				"Nagłówek 1"
+			|
+				"Nagłówek 2"
+		+|	|	"Dane A"
+			
+			
+			|	"Dane"
+			
+				^"pogrubienie"/^
+			
+				"B"
+			
+			
+		+|	|
+				"Dane C"
+			|
+				"Dane D"
+		+|
+	]
+
+	+
+	+
+
+	F	("Etykieta Wygraj Tableta")
+	
+		+
+	
+	
+			(t="text" n="name" "Imię")
+		
+		
+			+
+		
+		
+			(t="email" n="email" "Email")
+		
+		
+			+
+		
+		
+			(t="password" n="password" "Hasło")
+		
+		
+			+
+		
+		
+	
+			(t="checkbox" n="zgoda" v="1")
+		
+		
+			"Akceptuję"
+		
+		
+			+
+		
+		
+			(t="radio" n="plec" v="M")
+		
+		
+			"Mężczyzna"
+		
+		
+			(t="radio" n="plec" v="K")
+		
+		
+			"Kobieta"
+		
+		
+			+
+		
+		
+	
+/F
+
+	+
+	+
+
+	,
+		"Nagłówek Sekcji"
+/,
+
+	.
+		"Stopka © 2025"
+/.
+
+
+}!

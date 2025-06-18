@@ -1,0 +1,131 @@
+[comment encoding = UTF-8 /]
+[module generate2('http://www.example.org/projekt')]
+
+[template public generateElement(h : Html)]
+[comment @main/]
+[file ('output.html', false, 'UTF-8')]
+<!DOCTYPE html> 
+<html>
+<head>
+  [if (h._head <> null)]
+    [h._head.metas->collect(m | '<meta charset="'+m.text+'">' )/]
+    [h._head.titles->collect(t | '<title>' + t.text + '</title>')/]
+    [h._head.bases->collect(b | '<base href="' + b.text + '">')/]
+    [h._head.links->collect(l | '<link style="'+l.text+'">')/]
+    [h._head.styles->collect(s | '<style>' + s.text + '</style>')/]
+  [/if]
+</head>
+
+<body>[if (h._body <> null)]
+  [h._body.bodyElements->collect(e | e.generateBodyElement())/]
+[/if]</body>
+</html>
+[/file]
+[/template]
+
+[template public generateBodyElement(e : BodyElement)]
+[for (x : Heading| e.headings)]
+      <h[x.h_number/]> [x.text/] </h[x.h_number/]>
+[/for]
+[for (x : Paragraph| e.paragraphs)]
+	<p>[x.oclAsType(Paragraph).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</p>
+[/for]
+[for (x : Div| e.divs)]
+	<div>[x.oclAsType(Div).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</div>
+[/for]
+[for (x : Span| e.spans)]
+	<span>[x.oclAsType(Span).text/]</span>
+[/for]
+[for (x : BoldText| e.boldTexts)]
+	<strong>[x.oclAsType(BoldText).text/]</strong>
+[/for]
+[for (x : ItalicText| e.italicTexts)]
+	<i>[x.oclAsType(ItalicText).text/]</i>
+[/for]
+[for (x : UnderlineText| e.underlineTexts)]
+	<u>[x.oclAsType(UnderlineText).text/]</u>
+[/for]
+[for (x : LineBreak| e.lineBreaks)]
+	<br>
+[/for]
+[for (x : Image| e.images)]
+	<img href="[x.oclAsType(Image).link/]" alt="[x.oclAsType(Image).text/]"/>
+[/for]
+[for (x : HyperLink| e.hyperLinks)]
+	<a href="[x.oclAsType(HyperLink).link/]"> [x.oclAsType(HyperLink).text/]</a>
+[/for]
+[for (x : Code| e.codes)]
+	<code>[x.oclAsType(Code).text/]</code>
+[/for]
+[for (x : UnorderedList| e.unorderedLists)]
+	<ul>[x.oclAsType(UnorderedList).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</ul>
+[/for]
+[for (x : OrderedList| e.orderedLists)]
+	<ol>[x.oclAsType(OrderedList).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</ol>
+[/for]
+[for (x : ListItem| e.listItems)]
+	<li>[x.oclAsType(ListItem).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</li>
+[/for]
+[for (x : Form| e.forms)]
+	<form>[x.oclAsType(Form).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</form>
+[/for]
+[for (x : FormLabel| e.formLabels)]
+	<label name="[x.oclAsType(FormLabel).label_name/]">
+[/for]
+[for (x : FormField| e.formFields)]
+	[if (x.oclAsType(FormField).label_name <> null)] [x.oclAsType(FormField).label_name/] [/if]<input type="[x.oclAsType(FormField).type/]" name="[x.oclAsType(FormField).name/]">
+[/for]
+[for (x : FormCheckBoxRadio| e.formCheckBoxRadios)]
+	<input type="[x.oclAsType(FormCheckBoxRadio).type/]" name="[x.oclAsType(FormCheckBoxRadio).name/]" Value="[x.oclAsType(FormCheckBoxRadio).value/]">
+[/for]
+[for (x : Header| e.headers)]
+	<Header>[x.oclAsType(Header).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</Header>
+[/for]
+[for (x : Footer| e.footers)]
+	<Footer>[x.oclAsType(Footer).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		[x.text/]
+	[/if]</Footer>
+[/for]
+[for (x : Table| e.tables)]
+	<table>
+		[x.oclAsType(Table).tableRows->collect(r | r.generateRow())/]
+	</table>
+[/for]
+[for (x : PlainText| e.plainTexts)]
+	[x.text/]
+[/for]
+
+[for (x : BodyElement| e.bodyElements)]
+	[x.oclAsType(BodyElement)->collect(c | '<tr>'+c.generateBodyElement())+'</tr>'/]
+[/for]
+[/template]
+
+[template public generateRow(r : TableRow)]
+[for (x : TableCell| r.tableCells)]
+	<td>[x.oclAsType(TableCell).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]</td>[/for]
+[/template]

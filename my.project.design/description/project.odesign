@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="project" version="12.0.0.2017041100">
+  <ownedViewpoints name="Html_view" modelFileExtension="xmi">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Html_diagram" domainClass="projekt.Html" enablePopupBars="true">
+      <metamodel href="/projekt/model/projekt.ecore#/"/>
+      <defaultLayer name="Default">
+        <nodeMappings name="Html" domainClass="projekt.Html">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="Html" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="14" borderSizeComputationExpression="1">
+            <labelColor color="black"/>
+            <backgroundColor color="light_blue"/>
+            <labelExpression>aql:'&lt;Html>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Head" domainClass="projekt.Head">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="Head" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+          </style>
+          <style xsi:type="description_1:LozengeNodeDescription" labelSize="12" borderSizeComputationExpression="1">
+            <labelColor color="dark_blue"/>
+            <backgroundColor color="light_cyan"/>
+            <labelExpression>aql:'&lt;Head>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Meta" domainClass="projekt.Meta">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Meta '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Title" domainClass="projekt.Title">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Title '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_yellow"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Base" domainClass="projekt.Base">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Base '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_green"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Link" domainClass="projekt.Link">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Link '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_pink"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Style" domainClass="projekt.Style">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Style '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_orange"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Body" domainClass="projekt.Body">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="Body" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_gray']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="12" borderSizeComputationExpression="1">
+            <labelColor color="dark_green"/>
+            <backgroundColor color="light_green"/>
+            <labelExpression>aql:'&lt;Body>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="BodyElement" domainClass="projekt.BodyElement">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'BodyElement '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Heading" domainClass="projekt.Heading">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Heading '+self.h_number +' '+self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_chocolate']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:'H' + self.h_number.toString() + ': ' + self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Paragraph" domainClass="projekt.Paragraph">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Paragraph '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_yellow"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Div" domainClass="projekt.Div">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Div '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_purple"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Span" domainClass="projekt.Span">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Span'+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_cyan"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="UnorderedList" domainClass="projekt.UnorderedList">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'UnorderedList '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:'&lt;ul>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="OrderedList" domainClass="projekt.OrderedList">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="OrderedList" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:'&lt;ol>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ListItem" domainClass="projekt.ListItem">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="ListItem" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_yellow"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="HyperLink" domainClass="projekt.HyperLink">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'HyperLink  '+self.link" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_blue"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Image" domainClass="projekt.Image">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Image  '+self.link" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_green"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="BoldText" domainClass="projekt.BoldText">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Bold '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="ItalicText" domainClass="projekt.ItalicText">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Italic '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="UnderlineText" domainClass="projekt.UnderlineText">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Underline '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="LineBreak" domainClass="projekt.LineBreak">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="LineBreak" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Code" domainClass="projekt.Code">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Code '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_purple"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="PlainText" domainClass="projekt.PlainText">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Form" domainClass="projekt.Form">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="Form" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_cyan"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Footer" domainClass="projekt.Footer">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Footer '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_blue"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Header" semanticCandidatesExpression=")" domainClass="projekt.Header">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Header'+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_orange"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FormLabel" domainClass="projekt.FormLabel">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'FormLabel  '+self.label_name" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_yellow"/>
+            <labelExpression>aql:self.label_name</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FormField" domainClass="projekt.FormField">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'ForField  '+self.name" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_blue']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_pink"/>
+            <labelExpression>aql:self.name</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FormButton" domainClass="projekt.FormButton">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'FormButton  '+self.value" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_purple']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_green"/>
+            <labelExpression>aql:self.value</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FormCheckBoxRadio" domainClass="projekt.FormCheckBoxRadio">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'FormCheckBoxRadio  '+self.name" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_purple']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:self.name</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="Table" domainClass="projekt.Table">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="Table" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_yellow']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="10">
+            <backgroundColor color="light_blue"/>
+           <labelExpression>aql:'&lt;table>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="TableRow" domainClass="projekt.TableRow">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="TableRow" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_orange']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="8">
+            <backgroundColor color="light_gray"/>
+            <labelExpression>aql:'&lt;tr>'</labelExpression>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="TableCell" domainClass="projekt.TableCell">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="aql:'Cell '+ self.text" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_orange']"/>
+          </style>
+          <style xsi:type="description_1:SquareDescription" labelSize="8">
+            <backgroundColor color="light_yellow"/>
+            <labelExpression>aql:self.text</labelExpression>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="HeadToMeta" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Head']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Meta']" targetFinderExpression="aql:self.metas">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="HeadToTitle" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Head']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Title']" targetFinderExpression="aql:self.titles">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="HeadToBase" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Head']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Base']" targetFinderExpression="aql:self.bases">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="HeadToLink" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Head']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Link']" targetFinderExpression="aql:self.links">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="HeadToStyle" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Head']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Style']" targetFinderExpression="aql:self.styles">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Body']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements->select(e | e.oclIsKindOf(projekt::BodyElement))">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToParagraphs" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Paragraph']" targetFinderExpression="aql:self.paragraphs">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='cyan']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToUnorderedLists" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='UnorderedList']" targetFinderExpression="aql:self.unorderedLists">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='pink']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToOrderedLists" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='OrderedList']" targetFinderExpression="aql:self.orderedLists">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToListItem" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='ListItem']" targetFinderExpression="aql:self.listItems">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToLineBreaks" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='LineBreak']" targetFinderExpression="aql:self.lineBreaks">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToHyperLinks" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='HyperLink']" targetFinderExpression="aql:self.hyperLinks">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToSpans" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Span']" targetFinderExpression="aql:self.spans">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToCodes" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Code']" targetFinderExpression="aql:self.codes">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToFooters" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Footer']" targetFinderExpression="aql:self.footers">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToHeadings" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Heading']" targetFinderExpression="aql:self.headings">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToPlainTexts" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='PlainText']" targetFinderExpression="aql:self.plainTexts">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='green']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToBoldTexts" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BoldText']" targetFinderExpression="aql:self.boldTexts">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToItalicTexts" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='ItalicText']" targetFinderExpression="aql:self.italicTexts">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToDivs" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Div']" targetFinderExpression="aql:self.divs">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToForms" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Form']" targetFinderExpression="aql:self.forms">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToFormsCheckBoxRadio" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='FormCheckBoxRadio']" targetFinderExpression="aql:self.formCheckBoxRadios">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToTables" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Table']" targetFinderExpression="aql:self.tables">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='yellow']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToUnorderedLists" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='UnorderedList']" targetFinderExpression="aql:self.unorderedLists">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='pink']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToImage" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Image']" targetFinderExpression="aql:self.images">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToFormButtons" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='FormButton']" targetFinderExpression="aql:self.formButtons">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToFormLabel" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='FormLabel']" targetFinderExpression="aql:self.formLabels">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToFormField" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='FormField']" targetFinderExpression="aql:self.formFields">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="OrderedListsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='OrderedList']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="UnorderedListsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='UnorderedList']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='pink']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ParagraphsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Paragraph']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='cyan']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FormsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Form']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='red']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="DivsToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Div']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="TableToRows" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Table']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='TableRow']" targetFinderExpression="aql:self.tableRows">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="RowToCells" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='TableRow']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='TableCell']" targetFinderExpression="aql:self.tableCells">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="CellsToBodyElement" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='TableCell']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="FootersToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='Footer']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="BodyElementsToUnderlineText" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='UnderlineText']" targetFinderExpression="aql:self.underlineTexts">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='pink']"/>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ListItemToBodyElements" sourceMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='ListItem']" targetMapping="//@ownedViewpoints[name='Html_view']/@ownedRepresentations[name='Html_diagram']/@defaultLayer/@nodeMappings[name='BodyElement']" targetFinderExpression="aql:self.bodyElements">
+          <style>
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+          </style>
+        </edgeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

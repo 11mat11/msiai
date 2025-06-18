@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projekt:Html xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projekt="file:/C:/Users/matic/eclipse-workspace/projekt/model/projekt.ecore">
+ <head>
+    <metas text="UTF-8"/>
+    <titles
+        text="Kompletny Test Strony"/>
+    <bases text="https://test.com"/>
+    <links text="style.css"/>
+    <styles
+        text="body {color: red; background-color: yellow;};"/>
+  </head>
+  <body>
+    <bodyElements>
+      <headings
+          h_number="1"
+          text="Nagłówek 1"/>
+      <headings
+          h_number="2"
+          text="Nagłówek 2"/>
+      <headings
+          h_number="3"
+          text="Nagłówek 3"/>
+      <headings
+          h_number="4"
+          text="Nagłówek 4"/>
+      <headings
+          h_number="5"
+          text="Nagłówek 5"/>
+      <headings
+          h_number="6"
+          text="Nagłówek 6"/>
+    </bodyElements>
+    <bodyElements>
+      <paragraphs>
+        <bodyElements>
+          <plainTexts
+              text="Akapit z"/>
+        </bodyElements>
+        <bodyElements>
+          <boldTexts
+              text="Pogrubienie"/>
+        </bodyElements>
+        <bodyElements>
+          <plainTexts
+              text="i"/>
+        </bodyElements>
+        <bodyElements>
+          <italicTexts
+              text="kursywa"/>
+        </bodyElements>
+      </paragraphs>
+    </bodyElements>
+    <bodyElements>
+      <divs>
+        <bodyElements>
+          <plainTexts
+              text="Div ze"/>
+        </bodyElements>
+        <bodyElements>
+          <spans
+              text="spanem"/>
+        </bodyElements>
+        <bodyElements>
+          <plainTexts
+              text="i z obrazkiem"/>
+        </bodyElements>
+        <bodyElements>
+          <images
+              link="image.jpg"
+              text="Alt"/>
+        </bodyElements>
+      </divs>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <unorderedLists>
+        <bodyElements>
+          <listItems>
+            <bodyElements>
+              <plainTexts
+                  text="Lista"/>
+            </bodyElements>
+            <bodyElements>
+              <boldTexts
+                  text="pogrubienie"/>
+            </bodyElements>
+            <bodyElements>
+              <plainTexts
+                  text="nieuporządkowana"/>
+            </bodyElements>
+          </listItems>
+        </bodyElements>
+        <bodyElements>
+          <listItems
+              text="Element 1"/>
+        </bodyElements>
+        <bodyElements>
+          <listItems
+              text="Element 2"/>
+        </bodyElements>
+      </unorderedLists>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <orderedLists>
+        <bodyElements>
+          <listItems
+              text="Lista uporządkowana"/>
+          <listItems
+              text="Element A"/>
+          <listItems
+              text="Element B"/>
+        </bodyElements>
+      </orderedLists>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <hyperLinks
+          link="https://example.com"
+          text="Hiperłącze"/>
+    </bodyElements>
+    <bodyElements>
+      <underlineTexts
+          text="Podkreślenie"/>
+    </bodyElements>
+    <bodyElements>
+      <codes
+          text="let x = 5;"/>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <tables>
+        <tableRows>
+          <tableCells
+              text="Nagłówek 1"/>
+          <tableCells
+              text="Nagłówek 2"/>
+        </tableRows>
+        <tableRows>
+          <tableCells>
+            <bodyElements>
+              <plainTexts
+                  text="Dane A"/>
+            </bodyElements>
+          </tableCells>
+          <tableCells>
+            <bodyElements>
+              <plainTexts
+                  text="Dane"/>
+            </bodyElements>
+            <bodyElements>
+              <boldTexts
+                  text="pogrubienie"/>
+            </bodyElements>
+            <bodyElements>
+              <plainTexts
+                  text="B"/>
+            </bodyElements>
+          </tableCells>
+        </tableRows>
+        <tableRows>
+          <tableCells
+              text="Dane C"/>
+          <tableCells
+              text="Dane D"/>
+        </tableRows>
+      </tables>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <forms>
+        <bodyElements>
+          <formLabels
+              label_name="Etykieta Wygraj Tableta"/>
+        </bodyElements>
+        <bodyElements>
+          <lineBreaks/>
+        </bodyElements>
+        <bodyElements>
+          <bodyElements>
+            <formFields
+                type="text"
+                name="name"
+                label_name="Imię"/>
+          </bodyElements>
+          <bodyElements>
+            <lineBreaks/>
+          </bodyElements>
+          <bodyElements>
+            <formFields
+                type="email"
+                name="email"
+                label_name="Email"/>
+          </bodyElements>
+          <bodyElements>
+            <lineBreaks/>
+          </bodyElements>
+          <bodyElements>
+            <formFields
+                type="password"
+                name="password"
+                label_name="Hasło"/>
+          </bodyElements>
+          <bodyElements>
+            <lineBreaks/>
+          </bodyElements>
+        </bodyElements>
+        <bodyElements>
+          <bodyElements>
+            <formCheckBoxRadios
+                type="checkbox"
+                name="zgoda"
+                value="1"/>
+          </bodyElements>
+          <bodyElements>
+            <plainTexts
+                text="Akceptuję"/>
+          </bodyElements>
+          <bodyElements>
+            <lineBreaks/>
+          </bodyElements>
+          <bodyElements>
+            <formCheckBoxRadios
+                type="radio"
+                name="plec"
+                value="M"/>
+          </bodyElements>
+          <bodyElements>
+            <plainTexts
+                text="Mężczyzna"/>
+          </bodyElements>
+          <bodyElements>
+            <formCheckBoxRadios
+                type="radio"
+                name="plec"
+                value="K"/>
+          </bodyElements>
+          <bodyElements>
+            <plainTexts
+                text="Kobieta"/>
+          </bodyElements>
+          <bodyElements>
+            <lineBreaks/>
+          </bodyElements>
+        </bodyElements>
+      </forms>
+    </bodyElements>
+    <bodyElements>
+      <lineBreaks/>
+      <lineBreaks/>
+    </bodyElements>
+    <bodyElements>
+      <headers
+          text="Nagłówek Sekcji"/>
+    </bodyElements>
+    <bodyElements>
+      <footers
+          text="Stopka © 2025"/>
+    </bodyElements>
+  </body>
+</projekt:Html>

@@ -1,0 +1,130 @@
+[comment encoding = UTF-8 /]
+[module generate('http://www.example.org/projekt')]
+
+[template public generateElement(h : Html)]
+[comment @main/]
+[file ('output.p32', false, 'UTF-8')]
+|{
+  [if (h._head <> null)]
+    [h._head.metas->collect(m | ';"'+m.text+'"/;')/]
+    [h._head.titles->collect(t | '*"' + t.text + '"/*')/]
+    [h._head.bases->collect(b | '@"' + b.text + '"/@')/]
+    [h._head.links->collect(l | '?"' + l.text + '"/?')/]
+    [h._head.styles->collect(s | '`"' + s.text + '"/`')/]
+  [/if]
+}|
+
+!{[if (h._body <> null)]
+  [h._body.bodyElements->collect(e | e.generateBodyElement())/]
+[/if]}!
+[/file]
+[/template]
+
+[template public generateBodyElement(e : BodyElement)]
+[for (x : Heading| e.headings)]
+    [let hashes : String = Sequence{1..x.h_number}->iterate(i; acc : String = '' | acc + '#')]
+      [hashes/] "[x.text/]"
+    [/let]
+[/for]
+[for (x : Paragraph| e.paragraphs)]
+	*[x.oclAsType(Paragraph).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/*
+[/for]
+[for (x : Div| e.divs)]
+	@[x.oclAsType(Div).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/@
+[/for]
+[for (x : Span| e.spans)]
+	%"[x.oclAsType(Span).text/]"/%
+[/for]
+[for (x : BoldText| e.boldTexts)]
+	^"[x.oclAsType(BoldText).text/]"/^
+[/for]
+[for (x : ItalicText| e.italicTexts)]
+	_"[x.oclAsType(ItalicText).text/]"/_
+[/for]
+[for (x : UnderlineText| e.underlineTexts)]
+	~"[x.oclAsType(UnderlineText).text/]"/~
+[/for]
+[for (x : LineBreak| e.lineBreaks)]
+	+
+[/for]
+[for (x : Image| e.images)]
+	="[x.oclAsType(Image).link/]"/|"[x.oclAsType(Image).text/]"/=
+[/for]
+[for (x : HyperLink| e.hyperLinks)]
+	?"[x.oclAsType(HyperLink).link/]"|"[x.oclAsType(HyperLink).text/]"/?
+[/for]
+[for (x : Code| e.codes)]
+	`"[x.oclAsType(Code).text/]"/`
+[/for]
+[for (x : UnorderedList| e.unorderedLists)]
+	&[x.oclAsType(UnorderedList).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/&
+[/for]
+[for (x : OrderedList| e.orderedLists)]
+	$[x.oclAsType(OrderedList).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/$
+[/for]
+[for (x : ListItem| e.listItems)]
+	-[x.oclAsType(ListItem).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/-
+[/for]
+[for (x : Form| e.forms)]
+	F[x.oclAsType(Form).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/F
+[/for]
+[for (x : FormLabel| e.formLabels)]
+	("[x.oclAsType(FormLabel).label_name/]")
+[/for]
+[for (x : FormField| e.formFields)]
+	(t="[x.oclAsType(FormField).type/]" n="[x.oclAsType(FormField).name/]"[if (x.oclAsType(FormField).label_name <> null)] "[x.oclAsType(FormField).label_name/]"[/if])
+[/for]
+[for (x : FormCheckBoxRadio| e.formCheckBoxRadios)]
+	(t="[x.oclAsType(FormCheckBoxRadio).type/]" n="[x.oclAsType(FormCheckBoxRadio).name/]" v="[x.oclAsType(FormCheckBoxRadio).value/]")
+[/for]
+[for (x : Header| e.headers)]
+	,[x.oclAsType(Header).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/,
+[/for]
+[for (x : Footer| e.footers)]
+	.[x.oclAsType(Footer).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if]/.
+[/for]
+[for (x : Table| e.tables)]
+	[ '[' /]
+		[x.oclAsType(Table).tableRows->collect(r | r.generateRow())/]
+	[ ']' /]
+[/for]
+[for (x : PlainText| e.plainTexts)]
+	"[x.text/]"
+[/for]
+
+[for (x : BodyElement| e.bodyElements)]
+	[x.oclAsType(BodyElement)->collect(c | c.generateBodyElement())/]
+[/for]
+[/template]
+
+[template public generateRow(r : TableRow)]
+[for (x : TableCell| r.tableCells)]
+	|[x.oclAsType(TableCell).bodyElements->collect(c | c.generateBodyElement())/]
+	[if (x.text <> null)]
+		"[x.text/]"
+	[/if][/for]+|
+[/template]

@@ -1,0 +1,27 @@
+/*
+ * Zwraca wszystkie BodyElement (rekurencyjnie) z Html
+ */
+getAllBodyElements(self : projekt::Html) : Sequence(projekt::BodyElement) =
+  self.body.bodyElements->closure(e |
+    if e.oclIsKindOf(projekt::Paragraph) then
+      e.oclAsType(projekt::Paragraph).bodyElements
+    else if e.oclIsKindOf(projekt::Div) then
+      e.oclAsType(projekt::Div).bodyElements
+    else if e.oclIsKindOf(projekt::UnorderedList) then
+      e.oclAsType(projekt::UnorderedList).bodyElements
+    else if e.oclIsKindOf(projekt::OrderedList) then
+      e.oclAsType(projekt::OrderedList).bodyElements
+    else if e.oclIsKindOf(projekt::ListItem) then
+      e.oclAsType(projekt::ListItem).bodyElements
+    else if e.oclIsKindOf(projekt::TableCell) then
+      e.oclAsType(projekt::TableCell).bodyElements
+    else if e.oclIsKindOf(projekt::Form) then
+      e.oclAsType(projekt::Form).bodyElements
+    else if e.oclIsKindOf(projekt::FormField) then
+      e.oclAsType(projekt::FormField).bodyElements
+    else if e.oclIsKindOf(projekt::FormCheckBoxRadio) then
+      e.oclAsType(projekt::FormCheckBoxRadio).bodyElements
+    else
+      Sequence{}
+    endif
+  )
