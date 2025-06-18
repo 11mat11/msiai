@@ -2,23 +2,20 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projekt" nsURI="http://www.example.org/projekt" nsPrefix="projekt">
   <eClassifiers xsi:type="ecore:EClass" name="Html">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="head" eType="ecore:EClass /projekt/model/projekt.ecore#//Head"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass /projekt/model/projekt.ecore#//Body"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="head" upperBound="1" lowerBound="1" eType="#//Head" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" upperBound="1" lowerBound="1" eType="#//Body" containment="true"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: Head -->
   <eClassifiers xsi:type="ecore:EClass" name="Head">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="metas" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Meta" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="titles" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Title" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bases" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Base" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Link" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="styles" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Style" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="metas" upperBound="1" lowerBound="0" eType="#//Meta" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="titles" upperBound="1" lowerBound="0" eType="#//Title" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bases" upperBound="1" lowerBound="0" eType="#//Base" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="1" lowerBound="0" eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="styles" upperBound="1" lowerBound="0" eType="#//Style" containment="true"/>
   </eClassifiers>
+  
   <eClassifiers xsi:type="ecore:EClass" name="Meta">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -34,163 +31,197 @@
   <eClassifiers xsi:type="ecore:EClass" name="Style">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  
+  
+  <!-- CLASS: Body -->
   <eClassifiers xsi:type="ecore:EClass" name="Body">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: Heading -->
   <eClassifiers xsi:type="ecore:EClass" name="Heading">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="h_number" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: BodyElement -->
   <eClassifiers xsi:type="ecore:EClass" name="BodyElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="headings" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Heading" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphs" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Paragraph" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="divs" upperBound="-1" eType="ecore:EClass /projekt/model/projekt.ecore#//Div"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="spans" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Span" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="unorderedLists" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//UnorderedList" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="orderedLists" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//OrderedList" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="listItems" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//ListItem" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="footers" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Footer" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Header" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hyperLinks" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//HyperLink" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Image" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="boldTexts" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BoldText" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="italicTexts" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//ItalicText" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="underlineTexts" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//UnderlineText" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="lineBreaks" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//LineBreak" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="codes" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Code" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="plainTexts" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//PlainText" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="forms" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Form" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formLabels" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//FormLabel" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formFields" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//FormField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formButtons" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//FormButton" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="formCheckBoxRadios" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//FormCheckBoxRadio" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//Table" containment="true"/>
-  </eClassifiers>
+  	<eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="headings" upperBound="-1" eType="#//Heading" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paragraphs" upperBound="-1" eType="#//Paragraph" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="divs" upperBound="-1" eType="#//Div" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spans" upperBound="-1" eType="#//Span" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unorderedLists" upperBound="-1" eType="#//UnorderedList" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orderedLists" upperBound="-1" eType="#//OrderedList" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="listItems" upperBound="-1" eType="#//ListItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="footers" upperBound="-1" eType="#//Footer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="headers" upperBound="-1" eType="#//Header" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hyperLinks" upperBound="-1" eType="#//HyperLink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="images" upperBound="-1" eType="#//Image" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="boldTexts" upperBound="-1" eType="#//BoldText" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="italicTexts" upperBound="-1" eType="#//ItalicText" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="underlineTexts" upperBound="-1" eType="#//UnderlineText" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lineBreaks" upperBound="-1" eType="#//LineBreak" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="codes" upperBound="-1" eType="#//Code" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="plainTexts" upperBound="-1" eType="#//PlainText" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forms" upperBound="-1" eType="#//Form" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formLabels" upperBound="-1" eType="#//FormLabel" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formFields" upperBound="-1" eType="#//FormField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formButtons" upperBound="-1" eType="#//FormButton" containment="true"/> 
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formCheckBoxRadios" upperBound="-1" eType="#//FormCheckBoxRadio" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tables" upperBound="-1" eType="#//Table" containment="true"/>  
+  </eClassifiers>  
+  
+  
+  <!-- CLASS: Paragraph -->
   <eClassifiers xsi:type="ecore:EClass" name="Paragraph">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: Div -->
   <eClassifiers xsi:type="ecore:EClass" name="Div">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+
+  <!-- CLASS: Span -->
   <eClassifiers xsi:type="ecore:EClass" name="Span">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+
+  <!-- CLASS: ListItem -->
   <eClassifiers xsi:type="ecore:EClass" name="ListItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+
+  <!-- CLASS: UnorderedList -->
   <eClassifiers xsi:type="ecore:EClass" name="UnorderedList">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+
+  <!-- CLASS: OrderedList -->
   <eClassifiers xsi:type="ecore:EClass" name="OrderedList">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: HyperLink -->
   <eClassifiers xsi:type="ecore:EClass" name="HyperLink">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: Image -->
   <eClassifiers xsi:type="ecore:EClass" name="Image">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="link" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  
+  <!-- CLASS: BoldText -->
   <eClassifiers xsi:type="ecore:EClass" name="BoldText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: ItalicText -->
   <eClassifiers xsi:type="ecore:EClass" name="ItalicText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: UnderlineText -->
   <eClassifiers xsi:type="ecore:EClass" name="UnderlineText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LineBreak"/>
+  
+    <!-- CLASS: LineBreak -->
+  <eClassifiers xsi:type="ecore:EClass" name="LineBreak">
+  </eClassifiers>
+  
+    <!-- CLASS: Code -->
   <eClassifiers xsi:type="ecore:EClass" name="Code">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+  </eClassifiers>  
+  
+  <!-- CLASS: PlainText -->
   <eClassifiers xsi:type="ecore:EClass" name="PlainText">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: Form -->
   <eClassifiers xsi:type="ecore:EClass" name="Form">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>  
   </eClassifiers>
+
+  <!-- CLASS: Footer -->
   <eClassifiers xsi:type="ecore:EClass" name="Footer">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+
+  <!-- CLASS: Header -->
   <eClassifiers xsi:type="ecore:EClass" name="Header">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  
+  <!-- CLASS: FormLabel -->
   <eClassifiers xsi:type="ecore:EClass" name="FormLabel">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: FormField -->
   <eClassifiers xsi:type="ecore:EClass" name="FormField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: FormButton -->
   <eClassifiers xsi:type="ecore:EClass" name="FormButton">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  <!-- CLASS: FormCheckBoxRadio -->
   <eClassifiers xsi:type="ecore:EClass" name="FormCheckBoxRadio">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: Table -->
   <eClassifiers xsi:type="ecore:EClass" name="Table">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tableRows" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//TableRow" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableRows" upperBound="-1" eType="#//TableRow" containment="true"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: TableRow -->
   <eClassifiers xsi:type="ecore:EClass" name="TableRow">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tableCells" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//TableCell" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tableCells" upperBound="-1" eType="#//TableCell" containment="true"/>
   </eClassifiers>
+  
+  
+  <!-- CLASS: TableCell -->
   <eClassifiers xsi:type="ecore:EClass" name="TableCell">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1"
-        eType="ecore:EClass /projekt/model/projekt.ecore#//BodyElement" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-  </eClassifiers>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bodyElements" upperBound="-1" eType="#//BodyElement" containment="true"/>
+	<eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers> 
+  
 </ecore:EPackage>
