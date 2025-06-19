@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<projekt:Html xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projekt="file:/C:/Users/matic/git/repository/projekt/model/projekt.ecore">
+<projekt:Html xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projekt="platform:/resource/projekt/model/projekt.ecore">
  <head>
     <metas text="UTF-8"/>
     <titles
