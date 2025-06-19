@@ -1,5 +1,5 @@
 [comment encoding = UTF-8 /]
-[module generate2('http://www.example.org/projekt')]
+[module m2html('http://www.example.org/projekt')]
 
 [template public generateElement(h : Html)]
 [comment @main/]
